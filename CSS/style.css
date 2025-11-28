@@ -245,6 +245,7 @@ header .navbar-toggler:active {
 .instructions-wrapper,
 .nutrition-wrapper,
 .tips-wrapper {
+  height: auto;
   max-height: 350px;
 }
 
