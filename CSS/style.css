@@ -245,7 +245,7 @@ header .navbar-toggler:active {
 .instructions-wrapper,
 .nutrition-wrapper,
 .tips-wrapper {
-  height: 350px;
+  max-height: 350px;
 }
 
 .ingredient-num {
