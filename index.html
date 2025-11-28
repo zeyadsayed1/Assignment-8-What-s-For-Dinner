@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What's For Dinner</title>
+    <meta name="description" content="Delicious Meals" />
+    <link rel="shortcut icon" href="Images/favicon.png" type="image/x-icon" />
+    <meta name="keywords" content="Food Meal dinner lunch" />
+    <link rel="stylesheet" href="CSS/all.min.css" />
+    <link rel="stylesheet" href="CSS/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="CSS/style.css" />  -->
+    <link rel="stylesheet" href="CSS/style.min.css" />
+  </head>
+  <body
+    data-bs-spy="scroll"
+    data-bs-target="#navbar-example"
+    data-bs-offset="50"
+    tabindex="0"
+  >
+    <header>
+      <nav class="navbar navbar-expand-lg bg-white p-3">
+        <div class="container-fluid container-xl">
+          <div class="logo d-flex justify-content-center align-items-center">
+            <div
+              class="icon me-3 rounded-circle d-flex justify-content-center align-items-center"
+            >
+              <i class="fa-solid fa-utensils text-white fs-5"></i>
+            </div>
+            <div>
+              <h1 class="m-0 p-0 fs-4 fw-bold">What's For Dinner</h1>
+              <p class="m-0 p-0 text-gray-400">Your daily meal inspiration</p>
+            </div>
+          </div>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"
+              ><i class="fa-solid fa-bars"></i
+            ></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul
+              class="navbar-nav mt-4 mt-lg-0 ms-auto d-flex align-items-lg-center gap-3"
+            >
+              <li class="nav-item mt-4 mt-lg-0">
+                <span class="fs-5"><i class="fa-solid fa-bookmark"></i></span>
+                <span class="d-lg-none fw-medium ms-2">Saved Recipes</span>
+              </li>
+              <li class="nav-item">
+                <span class="fs-5"
+                  ><i class="fa-solid fa-clock-rotate-left"></i
+                ></span>
+                <span class="d-lg-none fw-medium ms-2">Recent</span>
+              </li>
+              <li class="nav-item">
+                <span class="fs-5"> <i class="fa-solid fa-gear"></i></span>
+                <span class="d-lg-none fw-medium ms-2">Settings</span>
+              </li>
+              <li class="nav-item d-flex align-items-center">
+                <div  class="img overflow-hidden ">
+                  <img
+                  src="Images/avatar-2.jpg"
+                  class="rounded-circle w-100"
+                  alt="person"
+                  id="Image"
+                  />
+                </div>
+                <span class="d-lg-none fw-medium ms-2 rounded-5">Profile</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="mt-4 mb-5">
+      <section id="recipe-section">
+        <div class="container-fluid px-4 px-lg-4 container-xl">
+          <div id="Meal-wrapper" class="row rounded-5">
+            <div class="col-lg-5 h-100 position-relative p-0">
+              <div class="img h-100 overflow-hidden">
+                <img
+                  src="Images/meal-3.png"
+                  class="w-100 h-100 object-fit-cover"
+                  alt=""
+                  id="MealImage"
+                />
+              </div>
+              <div
+                class="review position-absolute bg-white rounded-5 py-2 px-3"
+              >
+                <span class="me-1"
+                  ><i class="fa-solid fa-star text-warning"></i
+                ></span>
+                <span class="fw-bold me-1" id="Rating">4.6</span>
+                <span class="text-gray-600" id="Reviews">(278 reviews)</span>
+              </div>
+              <div
+                class="recipe-info bg-white position-absolute d-flex justify-content-between justify-content-md-evenly align-items-center gap-3 gap-lg-0 rounded-4 p-3"
+              >
+                <div class="text-center">
+                  <span class="orange-text"
+                    ><i class="fa-solid fa-clock fa-xl"></i>
+                  </span>
+                  <p class="p-0 m-0 text-gray-600 mt-1 mt-lg-2">Prep Time</p>
+                  <p  class="fw-bold p-0 m-0" id="PrepTime">15 min</p>
+                </div>
+                <div class="text-center">
+                  <span class="text-red"
+                    ><i class="fa-solid fa-fire-burner fa-xl mb-2"></i>
+                  </span>
+                  <p class="p-0 m-0 text-gray-600 mt-1 mt-lg-2" >Cook Time</p>
+                  <p id="CookTim"  class="fw-bold p-0 m-0" >20 min</p>
+                </div>
+                <div class="text-center">
+                  <span class="text-primary">
+                    <i class="fa-solid fa-users fa-xl mb-2"></i>
+                  </span>
+                  <p class="p-0 m-0 text-gray-600 mt-1 mt-lg-2">Servings</p>
+                  <p id="ServingPe" class="fw-bold p-0 m-0">4 people</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-7 bg-white h-100 overflow-y-auto">
+              <div
+                class="heading mt-3 d-flex flex-column-reverse flex-md-row align-items-start justify-content-between"
+              >
+                <div class="content">
+                  <div class="mb-3">
+                    <span
+                      class="green-span rounded-4 d-inline-block me-3 fw-semibold"
+                      id="Diffcu">Easy</span
+                    ><span
+                      class="blue-span rounded-4 d-inline-block fw-semibold"
+                     id="Categ" >American</span
+                    >
+                  </div>
+                  <h1 id="Mealn" class="fw-bold">Beef Tacos</h1>
+                  <p id="MealDesc" class="fw-normal text-gray-600 fs-5">
+                    Flavorful Mexican tacos with seasoned ground beef
+                  </p>
+                </div>
+                <div
+                  class="icons orange-text d-flex align-self-end align-self-md-center justify-content-md-center align-items-md-center"
+                >
+                  <div
+                    class="fs-5 d-flex justify-content-center align-items-center rounded-3 me-3"
+                  >
+                    <i class="fa-solid fa-bookmark"></i>
+                  </div>
+                  <div
+                    class="fs-5 d-flex justify-content-center align-items-center rounded-3"
+                  >
+                    <i class="fa-solid fa-share-nodes"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="d-flex align-items-center p-3 bg-danger bg-opacity-10 rounded-3 border-start border-4 mb-3 border-danger d-none"
+                id="WarningCard"
+              >
+                <i
+                  class="fa-solid fa-triangle-exclamation text-danger fs-4 me-3 mt-1"
+                ></i>
+                <div>
+                  <h5 class="mb-0 text-danger-emphasis fs-6 fw-bold">
+                    Extended Preparation Time
+                  </h5>
+                  <p class="mb-0 text-danger">
+                    This recipe requires more than 45 minutes to prepare. Plan
+                    accordingly!
+                  </p>
+                </div>
+              </div>
+
+              <ul
+                class="nav nav-tabs d-flex justify-content-evenly mb-3 gap-3 p-3"
+                id="myTab"
+                role="tablist"
+              >
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link active"
+                    id="home-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#Ingredients"
+                    type="button"
+                    role="tab"
+                    aria-controls="Ingredients"
+                    aria-selected="true"
+                  >
+                    <span><i class="fa-solid fa-list-check"></i> </span>
+                    Ingredients
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="profile-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#Instructions"
+                    type="button"
+                    role="tab"
+                    aria-controls="Instructions"
+                    aria-selected="false"
+                  >
+                    <span><i class="fa-solid fa-book-open"></i></span>
+                    Instructions
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="contact-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#Nutrition"
+                    type="button"
+                    role="tab"
+                    aria-controls="Nutrition"
+                    aria-selected="false"
+                  >
+                    <span><i class="fa-solid fa-chart-pie"></i></span> Nutrition
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="contact-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#Tips"
+                    type="button"
+                    role="tab"
+                    aria-controls="Tips"
+                    aria-selected="false"
+                  >
+                    <span><i class="fa-solid fa-lightbulb"></i></span> Chef's
+                    Tips
+                  </button>
+                </li>
+              </ul>
+              <div
+                class="tab-content border-1 border-bottom pb-3"
+                id="myTabContent"
+              >
+                <div
+                  class="tab-pane fade show active"
+                  id="Ingredients"
+                  role="tabpanel"
+                  aria-labelledby="home-tab"
+                  tabindex="0"
+                >
+                  <div
+                   id="IngredientsWrapper" class="ingredients-wrapper offwhite-bg p-4 rounded-4 overflow-y-auto"
+                  >
+                    <div class="d-flex mb-3">
+                      <div
+                        class="ingredient-num orange-bg text-white d-flex justify-content-center align-items-center rounded-circle fw-bold me-3"
+                      >
+                        1
+                      </div>
+                      <span class="text-gray-600">500g ground beef</span>
+                    </div>
+                    <div class="d-flex mb-3">
+                      <div
+                        class="ingredient-num orange-bg text-white d-flex justify-content-center align-items-center rounded-circle fw-bold me-3"
+                      >
+                        2
+                      </div>
+                      <span class="text-gray-600">8 taco shells</span>
+                    </div>
+                    <div class="d-flex mb-3">
+                      <div
+                        class="ingredient-num orange-bg text-white d-flex justify-content-center align-items-center rounded-circle fw-bold me-3"
+                      >
+                        3
+                      </div>
+                      <span class="text-gray-600">1 onion, diced</span>
+                    </div>
+                    <div class="d-flex mb-3">
+                      <div
+                        class="ingredient-num orange-bg text-white d-flex justify-content-center align-items-center rounded-circle fw-bold me-3"
+                      >
+                        4
+                      </div>
+                      <span class="text-gray-600"
+                        >2 tablespoons taco seasoning</span
+                      >
+                    </div>
+                    <div class="d-flex mb-3">
+                      <div
+                        class="ingredient-num orange-bg text-white d-flex justify-content-center align-items-center rounded-circle fw-bold me-3"
+                      >
+                        5
+                      </div>
+                      <span class="text-gray-600">Shredded lettuce</span>
+                    </div>
+                    <div class="d-flex mb-3">
+                      <div
+                        class="ingredient-num orange-bg text-white d-flex justify-content-center align-items-center rounded-circle fw-bold me-3"
+                      >
+                        6
+                      </div>
+                      <span class="text-gray-600">Diced tomatoes</span>
+                    </div>
+                    <div class="d-flex mb-3">
+                      <div
+                        class="ingredient-num orange-bg text-white d-flex justify-content-center align-items-center rounded-circle fw-bold me-3"
+                      >
+                        7
+                      </div>
+                      <span class="text-gray-600">Shredded cheddar cheese</span>
+                    </div>
+                    <div class="d-flex mb-3">
+                      <div
+                        class="ingredient-num orange-bg text-white d-flex justify-content-center align-items-center rounded-circle fw-bold me-3"
+                      >
+                        8
+                      </div>
+                      <span class="text-gray-600">Sour cream</span>
+                    </div>
+                    <div class="d-flex mb-3">
+                      <div
+                        class="ingredient-num orange-bg text-white d-flex justify-content-center align-items-center rounded-circle fw-bold me-3"
+                      >
+                        9
+                      </div>
+                      <span class="text-gray-600">Salsa</span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="Instructions"
+                  role="tabpanel"
+                  aria-labelledby="profile-tab"
+                  tabindex="0"
+                >
+                  <div id="InstructionsWrapper" class="instructions-wrapper p-4 overflow-y-auto">
+                    <div class="d-flex mb-4 pb-1 align-items-center">
+                      <div
+                        class="instruction-num flex-shrink-0 orange-bg text-white d-flex justify-content-center align-items-center rounded-4 fs-5 fw-bold me-3"
+                      >
+                        1
+                      </div>
+                      <span class="text-gray-600"
+                        >Heat a large skillet over medium-high heat. Cook ground
+                        beef until browned.</span
+                      >
+                    </div>
+                    <div class="d-flex mb-4 pb-1 align-items-center">
+                      <div
+                        class="instruction-num flex-shrink-0 orange-bg text-white d-flex justify-content-center align-items-center rounded-4 fs-5 fw-bold me-3"
+                      >
+                        2
+                      </div>
+                      <span class="text-gray-600"
+                        >Add diced onion and cook until softened, about 5
+                        minutes.</span
+                      >
+                    </div>
+                    <div class="d-flex mb-4 pb-1 align-items-center">
+                      <div
+                        class="instruction-num flex-shrink-0 orange-bg text-white d-flex justify-content-center align-items-center rounded-4 fs-5 fw-bold me-3"
+                      >
+                        3
+                      </div>
+                      <span class="text-gray-600"
+                        >Stir in taco seasoning and 1/2 cup water. Simmer for 10
+                        minutes.</span
+                      >
+                    </div>
+                    <div class="d-flex mb-4 pb-1 align-items-center">
+                      <div
+                        class="instruction-num flex-shrink-0 orange-bg text-white d-flex justify-content-center align-items-center rounded-4 fs-5 fw-bold me-3"
+                      >
+                        4
+                      </div>
+                      <span class="text-gray-600"
+                        >Warm taco shells according to package directions.</span
+                      >
+                    </div>
+                    <div class="d-flex mb-4 pb-1 align-items-center">
+                      <div
+                        class="instruction-num flex-shrink-0 orange-bg text-white d-flex justify-content-center align-items-center rounded-4 fs-5 fw-bold me-3"
+                      >
+                        5
+                      </div>
+                      <span class="text-gray-600"
+                        >Fill each shell with seasoned beef.</span
+                      >
+                    </div>
+                    <div class="d-flex mb-4 pb-1 align-items-center">
+                      <div
+                        class="instruction-num flex-shrink-0 orange-bg text-white d-flex justify-content-center align-items-center rounded-4 fs-5 fw-bold me-3"
+                      >
+                        6
+                      </div>
+                      <span class="text-gray-600"
+                        >Top with lettuce, tomatoes, cheese, sour cream, and
+                        salsa. Serve immediately.</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="Nutrition"
+                  role="tabpanel"
+                  aria-labelledby="contact-tab"
+                  tabindex="0"
+                >
+                  <div
+                    class="nutrition-wrapper overflow-x-hidden p-0 overflow-y-auto"
+                  >
+                    <div class="row g-4">
+                      <div class="col-12 col-md-6">
+                        <div
+                          class="inner gray-bg rounded-3 p-3 d-flex justify-content-start align-items-center"
+                        >
+                          <div class="d-flex align-items-center gap-2">
+                            <div
+                              class="icon orange-text orange-opacity-bg flex-shrink-0 rounded-3 d-flex justify-content-center align-items-center"
+                            >
+                              <i class="fa-solid fa-fire fs-6"></i>
+                            </div>
+                            <span class="fw-semibold text-gray-600"
+                              >Calories</span
+                            >
+                          </div>
+                          <span id="Kcal" class="fw-bold fs-5 lh-base ms-auto">
+                            420 kcal</span
+                          >
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <div
+                          class="inner gray-bg rounded-3 p-3 d-flex justify-content-start align-items-center"
+                        >
+                          <div class="d-flex align-items-center gap-2">
+                            <div
+                              class="icon blue-span flex-shrink-0 rounded-3 d-flex justify-content-center align-items-center"
+                            >
+                              <i class="fas fa-dumbbell fs-6"></i>
+                            </div>
+                            <span class="fw-semibold text-gray-600"
+                              >Protein</span
+                            >
+                          </div>
+                          <span id="Protin" class="fw-bold fs-5 lh-base ms-auto"> 26g</span>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <div
+                          class="inner gray-bg rounded-3 p-3 d-flex justify-content-start align-items-center"
+                        >
+                          <div class="d-flex align-items-center gap-2">
+                            <div
+                              class="icon yellow-icon flex-shrink-0 rounded-3 d-flex justify-content-center align-items-center"
+                            >
+                              <i class="fas fa-wheat-awn fs-6"></i>
+                            </div>
+                            <span class="fw-semibold text-gray-600"
+                              >Carbohydrates</span
+                            >
+                          </div>
+                          <span id="Carb" class="fw-bold fs-5 lh-base ms-auto"> 32g</span>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <div
+                          class="inner gray-bg rounded-3 p-3 d-flex justify-content-start align-items-center"
+                        >
+                          <div class="d-flex align-items-center gap-2">
+                            <div
+                              class="icon red-icon flex-shrink-0 rounded-3 d-flex justify-content-center align-items-center"
+                            >
+                              <i class="fas fa-droplet fs-6"></i>
+                            </div>
+                            <span class="fw-semibold text-gray-600">Fat</span>
+                          </div>
+                          <span id="Fats" class="fw-bold fs-5 lh-base ms-auto"> 20g</span>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <div
+                          class="inner gray-bg rounded-3 p-3 d-flex justify-content-start align-items-center"
+                        >
+                          <div class="d-flex align-items-center gap-2">
+                            <div
+                              class="icon green-span flex-shrink-0 rounded-3 d-flex justify-content-center align-items-center"
+                            >
+                              <i class="fas fa-seedling fs-6"></i>
+                            </div>
+                            <span class="fw-semibold text-gray-600">Fiber</span>
+                          </div>
+                          <span id="Fibers" class="fw-bold fs-5 lh-base ms-auto"> 4g</span>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <div
+                          class="inner gray-bg rounded-3 p-3 d-flex justify-content-start align-items-center"
+                        >
+                          <div class="d-flex align-items-center gap-2">
+                            <div
+                              class="icon purple-icon flex-shrink-0 rounded-3 d-flex justify-content-center align-items-center"
+                            >
+                              <i class="fas fa-cube fs-6"></i>
+                            </div>
+                            <span class="fw-semibold text-gray-600"
+                              >Sodium</span
+                            >
+                          </div>
+                          <span id="Soduim" class="fw-bold fs-5 lh-base ms-auto">
+                            780mg</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="Tips"
+                  role="tabpanel"
+                  aria-labelledby="contact-tab"
+                  tabindex="0"
+                >
+                  <div id="TipsWrapper" class="tips-wrapper overflow-x-hidden overflow-y-auto">
+                    <div
+                      class="d-flex align-items-start p-3 bg-warning bg-opacity-10 rounded-3 border-start border-4 mb-3 border-warning"
+                    >
+                      <i
+                        class="fas fa-circle-check brown-text fs-4 me-3 mt-1"
+                      ></i>
+                      <p class="mb-0 text-dark">
+                        Drain excess fat from beef for healthier tacos
+                      </p>
+                    </div>
+                    <div
+                      class="d-flex align-items-start p-3 bg-warning bg-opacity-10 rounded-3 border-start border-4 mb-3 border-warning"
+                    >
+                      <i
+                        class="fas fa-circle-check brown-text fs-4 me-3 mt-1"
+                      ></i>
+                      <p class="mb-0 text-dark">
+                        Warm shells in oven for better texture
+                      </p>
+                    </div>
+                    <div
+                      class="d-flex align-items-start p-3 bg-warning bg-opacity-10 rounded-3 border-start border-4 mb-3 border-warning"
+                    >
+                      <i
+                        class="fas fa-circle-check brown-text fs-4 me-3 mt-1"
+                      ></i>
+                      <p class="mb-0 text-dark">
+                        Prepare all toppings before cooking beef
+                      </p>
+                    </div>
+                    <div
+                      class="d-flex align-items-start p-3 bg-warning bg-opacity-10 rounded-3 border-start border-4 mb-3 border-warning"
+                    >
+                      <i
+                        class="fas fa-circle-check brown-text fs-4 me-3 mt-1"
+                      ></i>
+                      <p class="mb-0 text-dark">
+                        Use ground turkey for a lighter option
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button
+                id="TryAnother"
+                onclick="ChangeMeal()"
+                class="try-another btn mt-3 text-white rounded-3 fw-semibold"
+              >
+                <span><i class="fa-solid fa-rotate me-2"></i></span>Try Another
+                Recipe
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <!-- <script src="JS/index.js"></script> -->
+    <script src="JS/index.min.js"></script>
+  </body>
+</html>
